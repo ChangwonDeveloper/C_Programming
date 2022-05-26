@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1653549080 source:c:\users\offic\desktop\programming\udemy\c\codeblock\guessthenumberchallenge\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
