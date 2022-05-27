@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1510907146 source:c:\users\offic\desktop\programming\udemy\c\codeblock\arrays-(demonstration)-create-a-simple-weather-program-source-code\main.c
+	<stdio.h>
+	<stdlib.h>
+

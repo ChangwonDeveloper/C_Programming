@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1653618819 source:c:\users\offic\desktop\programming\udemy\c\codeblock\arrays-(demonstration)-generate-prime-numbers-source-code\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
