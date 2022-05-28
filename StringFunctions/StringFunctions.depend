@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1653696383 source:c:\users\offic\desktop\programming\udemy\c\codeblock\stringfunctions\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
