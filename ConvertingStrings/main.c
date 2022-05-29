@@ -4,7 +4,7 @@
 
 int main()
 {
-    char text[100]; // input buffer for string ti be searched
+    char text[100]; // input buffer for string to be searched
     char substring[40]; // input buffer for string sought
 
     printf("Enter the string to be searched (less than %d characters): \n", 100);

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1653825418 source:c:\users\offic\desktop\programming\udemy\c\codeblock\codeblockdebugger\main.c
+	<stdio.h>
+	<stdlib.h>
+

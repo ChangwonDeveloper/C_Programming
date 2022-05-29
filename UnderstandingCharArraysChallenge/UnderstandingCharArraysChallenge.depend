@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1653797263 source:c:\users\offic\desktop\programming\udemy\c\codeblock\understandingchararrayschallenge\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+

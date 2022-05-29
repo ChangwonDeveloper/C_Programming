@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1511142506 source:c:\users\jfedin\downloads\understandingcharacterstrings\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1511092106 source:c:\users\offic\desktop\programming\udemy\c\codeblock\character-strings-(demonstration)-understanding-char-arrays-source-code\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

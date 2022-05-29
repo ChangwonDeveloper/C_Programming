@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1511093942 source:c:\users\offic\desktop\programming\udemy\c\codeblock\character-strings-(demonstration)-utilizing-common-string-functions-source-code\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
