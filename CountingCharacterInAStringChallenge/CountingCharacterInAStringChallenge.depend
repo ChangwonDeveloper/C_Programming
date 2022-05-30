@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1653899876 source:c:\users\offic\desktop\programming\udemy\c\codeblock\countingcharacterinastringchallenge\main.c
+	<stdio.h>
+	<stdlib.h>
+

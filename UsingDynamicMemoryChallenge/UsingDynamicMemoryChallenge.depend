@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1653915146 source:c:\users\offic\desktop\programming\udemy\c\codeblock\usingdynamicmemorychallenge\main.c
+	<stdio.h>
+	<stdlib.h>
+

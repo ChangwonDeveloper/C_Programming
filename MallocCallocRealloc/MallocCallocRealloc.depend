@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1653912078 source:c:\users\offic\desktop\programming\udemy\c\codeblock\malloccallocrealloc\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
