@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1653993015 source:c:\users\offic\desktop\programming\udemy\c\codeblock\readingforafile\main.c
+	<stdio.h>
+	<stdlib.h>
+
