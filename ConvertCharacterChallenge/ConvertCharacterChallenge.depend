@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1654057564 source:c:\users\offic\desktop\programming\udemy\c\codeblock\convertcharacterchallenge\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

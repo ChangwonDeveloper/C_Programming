@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1512283460 source:c:\users\offic\desktop\programming\udemy\c\codeblock\file-input-and-output-(demonstration)-find-the-number-of-lines-in-a-file-source-code\main.c
+	<stdio.h>
+	<stdlib.h>
+
