@@ -15,10 +15,10 @@ some functions that you should probably create
 */
 
 char grids[9] = {'1','2','3','4','5','6','7','8','9'};
-char previousChoice[9];
+int previousChoice[9] = {0,0,0,0,0,0,0,0,0};
 int turn = 1;
-char gridChoicePlayer1[10];
-char gridChoicePlayer2[10];
+char gridChoicePlayer1[9];
+char gridChoicePlayer2[9];
 
 int checkForWin(int turn);
 void markBoard(char grids[]);
@@ -37,7 +37,7 @@ int main()
 
 
     // Check win or draw or continue
-while(checkForWin(turn) != 2 && checkForWin(turn) != 3 && checkForWin(turn) != 4){
+while(true){
 
     // Getting input from user
         if(turn % 2 == 1){
@@ -59,17 +59,27 @@ while(checkForWin(turn) != 2 && checkForWin(turn) != 3 && checkForWin(turn) != 4
     if(turn % 2 == 1){
         grids[choice-1] = 'X';
         gridChoicePlayer1[choice-1] = 1;
-        turn++;
     }else{
         grids[choice-1] = 'O';
         gridChoicePlayer2[choice-1] = 1;
-        turn++;
     }
     system("clear");
 
     // And redisplay the screen
     markBoard(grids);
     // if it is not above situations, continue to getting input from user.....
+    if(checkForWin(turn) == 2){
+        printf("Plalyer 1 win!");
+        break;
+    }else if(checkForWin(turn) == 3){
+        printf("Player 2 win!");
+        break;
+    }else if(checkForWin(turn) == 4){
+        printf("It is draw");
+        break;
+    }
+
+    turn++;
 
     }
 
@@ -89,20 +99,19 @@ void markBoard(char grids[]){
     printf("  %c |  %c  |  \%c \n", grids[6],grids[7],grids[8]);
     printf("____|_____|_____\n");
 }
-
+// cant check previous position
 bool validCheck(int choice){
-    int index = 0;
     if(choice > 9 || choice <1){
         return true;
     }
-    for(int i = 0; i < 9; i++){
-        if(previousChoice[i] == choice){
-            return true;
+    // it works after change this part.
+    //    previousChoice[choice-1] = choice-1; to 1
+
+    if(previousChoice[choice-1] == 0){
+        previousChoice[choice-1] = 1;
+        return false;
         }
-        index++;
-    }
-    previousChoice[index-1] = choice;
-    return false;
+    return true;
 }
 
 /*
@@ -120,86 +129,65 @@ case 8 2,4,6
 int checkForWin(int turn){
     if(turn % 2 == 1){
             if(gridChoicePlayer1[0] == 1 && gridChoicePlayer1[1] == 1 && gridChoicePlayer1[2] == 1){
-                printf("Player 1 Win!");
                 return 2;
             }
             else if(gridChoicePlayer1[3] == 1 && gridChoicePlayer1[4] == 1 && gridChoicePlayer1[5] == 1){
-                printf("Player 1 Win!");
                 return 2;
             }
             else if(gridChoicePlayer1[6] == 1 && gridChoicePlayer1[7] == 1 && gridChoicePlayer1[8] == 1){
-                printf("Player 1 Win!");
                 return 2;
             }
             else if(gridChoicePlayer1[0] == 1 && gridChoicePlayer1[3] == 1 && gridChoicePlayer1[6] == 1){
-                printf("Player 1 Win!");
                 return 2;
             }
             else if(gridChoicePlayer1[1] == 1 && gridChoicePlayer1[4] == 1 && gridChoicePlayer1[7] == 1){
-                printf("Player 1 Win!");
                 return 2;
             }
             else if(gridChoicePlayer1[2] == 1 && gridChoicePlayer1[5] == 1 && gridChoicePlayer1[8] == 1){
-                printf("Player 1 Win!");
                 return 2;
             }
             else if(gridChoicePlayer1[0] == 1 && gridChoicePlayer1[4] == 1 && gridChoicePlayer1[8] == 1){
-                printf("Player 1 Win!");
                 return 2;
             }
             else if(gridChoicePlayer1[2] == 1 && gridChoicePlayer1[4] == 1 && gridChoicePlayer1[6] == 1){
-                printf("Player 1 Win!");
                 return 2;
             }
     }
     else{
             if(gridChoicePlayer2[0] == 1 && gridChoicePlayer2[1] == 1 && gridChoicePlayer2[2] == 1){
-                printf("Player 2 Win!");
                 return 3;
             }
             else if(gridChoicePlayer2[3] == 1 && gridChoicePlayer2[4] == 1 && gridChoicePlayer2[5] == 1){
-                printf("Player 2 Win!");
                 return 3;
             }
             else if(gridChoicePlayer2[6] == 1 && gridChoicePlayer2[7] == 1 && gridChoicePlayer2[8] == 1){
-                printf("Player 2 Win!");
                 return 3;
             }
             else if(gridChoicePlayer2[0] == 1 && gridChoicePlayer2[3] == 1 && gridChoicePlayer2[6] == 1){
-                printf("Player 2 Win!");
                 return 3;
             }
             else if(gridChoicePlayer2[1] == 1 && gridChoicePlayer2[4] == 1 && gridChoicePlayer2[7] == 1){
-                printf("Player 2 Win!");
                 return 3;
             }
             else if(gridChoicePlayer2[2] == 1 && gridChoicePlayer2[5] == 1 && gridChoicePlayer2[8] == 1){
-                printf("Player 2 Win!");
                 return 3;
             }
             else if(gridChoicePlayer2[0] == 1 && gridChoicePlayer2[4] == 1 && gridChoicePlayer2[8] == 1){
-                printf("Player 2 Win!");
                 return 3;
             }
             else if(gridChoicePlayer2[2] == 1 && gridChoicePlayer2[4] == 1 && gridChoicePlayer2[6] == 1){
-                printf("Player 2 Win!");
                 return 3;
             }
     }
 
     // check for draw
-    int count = 0;
     for(int i = 0; i < 9; i++){
-        if(previousChoice[i] == i){
-            count++;
-        }
+        if(previousChoice[i] == 0)
+            return 5;
     }
-    if(count == 9){
-        printf("It is draw");
-        return 4;
-    }
+    return 4;
+
 
     // no winner and no draw. Continue the game
-    return 5;
 
 }
