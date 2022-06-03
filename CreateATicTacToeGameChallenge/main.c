@@ -106,9 +106,11 @@ bool validCheck(int choice){
     }
     // it works after change this part.
     //    previousChoice[choice-1] = choice-1; to 1
+    // the reason is if choice is 1, choice-1 is 0. so 0 is saved to previousChoice[0]
+    // Then it does not work on to check draw
 
     if(previousChoice[choice-1] == 0){
-        previousChoice[choice-1] = 1;
+        previousChoice[choice-1] = choice;
         return false;
         }
     return true;
